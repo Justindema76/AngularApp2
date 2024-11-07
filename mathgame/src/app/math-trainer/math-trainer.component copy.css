@@ -1,0 +1,186 @@
+/* Container and Header Styles */
+/* body{
+  background: url(ham-icon.png);
+} */
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+.operation-image {
+  width: 200px; /* Control the maximum width */
+  height:200px;     /* Keeps the image aspect ratio */
+  cursor: pointer;  /* Changes cursor to pointer for clickability */
+ 
+}
+
+/* Make toolbar full width and add padding */
+mat-toolbar {
+  width: 100%;
+  padding: 10px;
+  background-color: white; /* Friendly, bright yellow */
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling for readability */
+.toolbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #3f51b5; /* Friendly, approachable color */
+  text-align: center;
+  flex: 1; /* Take remaining space */
+  
+}
+
+
+.side-menu {
+  background-color: #f0f0f0; /* Light background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Allows it to overlay properly */
+  top: 60px; /* Adjust based on your toolbar height */
+  left: 0;
+  right: 0;
+}
+
+.side-menu ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 10px 0; /* Spacing between items */
+  padding: 10px; /* Padding for touch-friendly buttons */
+  background-color: #e8e8e8; /* Light grey for buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+  text-align: center; /* Center the text */
+}
+
+.side-menu li:hover {
+  background-color: #d0d0d0; /* Change background on hover */
+}
+
+.operation-image {
+  width: 200px; /* Adjust to fill container width */
+  height: 200px; /* Set a fixed height for the operation images */
+  background-size: cover;
+  background-position: center;
+}
+
+.addition {
+  background-image: url('ham-icon.png');
+}
+
+.subtraction {
+  background-image: url('security.png');
+}
+
+/* .multiplication {
+  background-image: url();
+}
+
+.division {
+  background-image: url();
+} */
+
+
+
+
+
+
+
+h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 3rem; /* You can adjust the size to your liking */
+  color: #007bff; /* Primary color */
+}
+
+/* Button Styling */
+.btn-group .btn {
+  font-size: 1.8rem; /* Increase font size for better readability */
+  padding: 12px 15px; /* Increase padding for bigger buttons */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  border-radius: 20px;
+  position: relative; /* Position for shadow effect */
+  overflow: hidden; /* To ensure the shadow doesn't overflow */
+}
+
+/* Hover Effects */
+.btn-group .btn:hover {
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a pronounced shadow effect */
+  color: #fff; /* Keep text color white on hover */
+}
+
+/* Button Colors */
+.btn-outline-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-outline-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-outline-warning {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* Additional Hover Effects for Color Change */
+.btn-outline-primary:hover {
+  background-color: #0056b3; /* Darken blue */
+}
+
+.btn-outline-danger:hover {
+  background-color: #c82333; /* Darken red */
+}
+
+.btn-outline-success:hover {
+  background-color: #218838; /* Darken green */
+}
+
+.btn-outline-warning:hover {
+  background-color: #e0a800; /* Darken yellow */
+}
+
+
+.hamburger-icon {
+  width: 40px; /* Set the width of the div */
+  height: 40px; /* Set the height of the div */
+  background-image: url('ham-icon.png'); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the whole div */
+  background-position: center; /* Center the image within the div */
+  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  border: none; /* Remove the border */
+  outline: none; /* Remove outline */
+  border-radius: 5px; /* Optional rounded corners */
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; /* Fixed width for the container */
+  height: 50px; /* Set a height for the container to allow vertical centering */
+  margin: 0 auto; /* Center the form control horizontally in its parent */
+}
+
+.answer-input {
+  width: 20%; /* Adjust input width as needed */
+  padding: 20px; /* Add some padding for better appearance */
+  text-align: center; /* Center text inside input */
+}
