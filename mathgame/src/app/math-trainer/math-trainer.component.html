@@ -1,0 +1,65 @@
+<body>
+ <header>
+    <div class="toolbar-title">Math Jungle</div>
+    <div class="score-box mt-4" *ngIf="gameStarted">
+      <p>Score: {{ score }}</p>
+    </div>
+      
+        <nav class="grid-container">
+          <div class="operation-image addition" 
+               [class.pressed]="isPressed('+')" 
+               (click)="selectOperation('+')"></div>
+          <div class="operation-image subtraction" 
+               [class.pressed]="isPressed('-')" 
+               (click)="selectOperation('-')"></div>
+          <div class="operation-image multiplication" 
+               [class.pressed]="isPressed('*')" 
+               (click)="selectOperation('*')"></div>
+          <div class="operation-image division" 
+               [class.pressed]="isPressed('/')" 
+               (click)="selectOperation('/')"></div>
+        </nav>
+        <div class=""></div>
+    </header>
+      
+  <div class="greeting">
+  </div>
+  <main>
+  <div class="text-center my-5">
+  <div *ngIf="currentQuestion">
+    <div class="text-success question-container">
+      {{ currentQuestion.questionText }}</div>
+    
+      <input 
+      type="number"
+      class="form-control text-center answer-input my-2"
+      [(ngModel)]="userAnswer"
+      placeholder="Your answer"
+      (keydown.enter)="checkAnswer()" 
+    />
+    <button class="btn btn-primary " (click)="checkAnswer()">Submit Answer</button>
+    <div *ngIf="feedback" class="mt-3 answer">
+      <p>{{ feedback }}</p>
+    </div>
+  </div>
+  <!-- Show score only after the game starts -->
+<!-- <div class="score-box mt-4" *ngIf="gameStarted">
+  <p>Score: {{ score }}</p>
+</div> -->
+  </div>
+</main>
+
+</body>
+  
+  <script>
+    // Example JavaScript to add/remove the pressed class when an operation is selected
+function selectOperation(operation) {
+  // Remove the pressed class from all operation images
+  document.querySelectorAll('.operation-image').forEach(img => img.classList.remove('pressed'));
+
+  // Add the pressed class to the selected operation
+  const selectedOperation = document.querySelector(`.${operation}`);
+  selectedOperation.classList.add('pressed');
+}
+
+  </script>
