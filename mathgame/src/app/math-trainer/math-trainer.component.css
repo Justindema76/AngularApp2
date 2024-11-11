@@ -1,0 +1,268 @@
+/* Container and Header Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  align-items: center; /* Vertically aligns items in the header */
+  padding: 10px;
+  background-color: #218838;
+  height: 130PX;
+  
+}
+
+.toolbar-title {
+  margin-left: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px #000000;
+  flex: 1; /* Takes up available space to push .score-box to the right */
+}
+
+.score-box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Aligns score-box content to the right */
+  align-items: center;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #ffffff;
+  text-align: right;
+  flex: 1; /* Aligns with .toolbar-title */
+}
+.score-box p{
+  margin: 0 50px;
+  font-size: 50px;
+  -webkit-text-stroke: 2px #000000; 
+  font-weight: 700;
+}
+
+
+
+
+body {
+   background: url(assets/junglepattern2.png);
+  background-size: 100% auto; /* Adjusts the image to fit within the viewport */
+  background-repeat: repeat; /* Ensures the image repeats */
+  background-position: center 80px; /* Centers the image */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* Makes the image cover the entire background area */
+    background-repeat: repeat; /* Keep repeating the image even on smaller screens */
+  }
+}
+ main{
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+.btn-group-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Grid container with specific size for columns and rows */
+.grid-container {
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px); /* 4 columns, each 120px wide */
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 80px;
+}
+
+/* Operation button styles */
+.operation-image {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  margin: 30px 0;
+  
+}
+
+/* Control Button Size */
+.btn-group .btn {
+  font-size: 2rem; /* Increase font size for better readability */
+  padding: 20px 25px; /* Increase padding for bigger buttons */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  border-radius: 10px;
+  position: relative; /* Position for shadow effect */
+  width: 150px;
+ 
+}
+
+/* Hover Effects */
+.btn-group .btn:hover {
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a pronounced shadow effect */
+  color: #fff; /* Set text color to white on hover */
+}
+
+/* Button Colors */
+.btn-outline-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.btn-outline-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid #dc3545;
+}
+
+.btn-outline-warning {
+  background-color: #ffc107;
+  color: #fff;
+  border: 1px solid #ffc107;
+}
+
+/* Green Color for Fourth Option */
+.btn-outline-success {
+  background-color: #28a745; /* Green background */
+  color: #fff;
+  border: 1px solid #28a745; /* Green border */
+}
+
+/* Additional Hover Effects for Color Change */
+.btn-outline-primary:hover {
+  background-color: #0056b3; /* Darken blue */
+  border-color: #0056b3;
+}
+
+.btn-outline-danger:hover {
+  background-color: #c82333; /* Darken red */
+  border-color: #c82333;
+}
+
+.btn-outline-warning:hover {
+  background-color: #e0a800; /* Darken yellow */
+  border-color: #e0a800;
+}
+
+.btn-outline-success:hover {
+  background-color: #218838; /* Darken green */
+  border-color: #218838;
+}
+
+@media (max-width: 576px) {
+  /* For small screens, change grid to 1 column */
+  .grid-container {
+    grid-template-columns: repeat(2, 120px); 
+  }
+}
+
+/* 3D Hover Effect */
+.operation-image:hover {
+  transform: translateY(-15px); /* Lift up effect when hovered */
+  filter: brightness(1.2); /* Slightly increase brightness on hover */
+}
+
+/* Pressed Effect when selected (when operation is clicked) */
+.operation-image.pressed {
+  transform: translateY(-15px); /* Make it appear pressed into the surface */
+  filter: brightness(1.2); /* Slightly darken the image when pressed */
+  transition: none; /* Disable transition so it stays pressed immediately */
+}
+
+/* Add background images for each operation */
+.addition {
+  background-image: url('./assets/addition.png');
+  
+}
+
+.subtraction {
+  background-image: url('./assets/subtraction.png');
+}
+
+.multiplication {
+  background-image: url('./assets/multiplication.png');
+}
+
+.division {
+  background-image: url('./assets/division.png');
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px; /* Fixed width for the container */
+  height: 50px; /* Set a height for the container to allow vertical centering */
+  margin: 0 auto; /* Center the form control horizontally in its parent */
+  color: white;
+}
+.question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: auto; /* Content width will be based on its size */
+  width: 200px; /* Set a maximum width */
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 auto; /* Center the container horizontally */
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.challenge{
+
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px #000000;
+}
+
+
+
+.answer{
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: white;
+  -webkit-text-stroke: 2px #000000;
+}
+ /* Customizing the Submit Answer button */
+.btn-primary {
+  background-color: #28a745; /* Change background color to green */
+  border-color: #28a745;
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 20px; /* Larger padding */
+  font-size: 18px; /* Larger font size */
+}
+
+.btn-primary:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #1e7e34;
+}
+
+footer {
+  display: flex;
+height: 100px;
+  align-items: center; /* Vertically align the content in the header */
+  padding: 10px;
+  background-color: #b4f577; /* Optional: background color for header */
+}
