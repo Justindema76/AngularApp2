@@ -41,38 +41,23 @@ header {
   -webkit-text-stroke: 2px #000000; 
   font-weight: 700;
 }
-
-
-
-
 body {
-   background: url(assets/junglepattern2.png);
-  background-size: 100% auto; /* Adjusts the image to fit within the viewport */
-  background-repeat: repeat; /* Ensures the image repeats */
-  background-position: center 80px; /* Centers the image */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  body {
-    background-size: cover; /* Makes the image cover the entire background area */
-    background-repeat: repeat; /* Keep repeating the image even on smaller screens */
-  }
+  background: url(assets/jungle-bkg.png);
+  background-size: cover; /* Makes sure the image covers the entire area */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-position: center 100px; /* Centers the image */
 }
  main{
+  display: flex;
   justify-content: center;
   align-items: center;
  }
-
-
-
 .btn-group-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-/* Grid container with specific size for columns and rows */
 .grid-container {
   margin-right: 50px;
   display: grid;
@@ -99,74 +84,24 @@ body {
   margin: 30px 0;
   
 }
-
 /* Control Button Size */
 .btn-group .btn {
-  font-size: 2rem; /* Increase font size for better readability */
-  padding: 20px 25px; /* Increase padding for bigger buttons */
-  transition: all 0.3s ease; /* Smooth transition for all properties */
+  font-size: 2rem; 
+  padding: 20px 25px; 
+  transition: all 0.3s ease; 
   border-radius: 10px;
-  position: relative; /* Position for shadow effect */
+  position: relative; 
   width: 150px;
- 
 }
-
 /* Hover Effects */
 .btn-group .btn:hover {
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a pronounced shadow effect */
-  color: #fff; /* Set text color to white on hover */
-}
-
-/* Button Colors */
-.btn-outline-primary {
-  background-color: #007bff;
-  color: #fff;
-  border: 1px solid #007bff;
-}
-
-.btn-outline-danger {
-  background-color: #dc3545;
-  color: #fff;
-  border: 1px solid #dc3545;
-}
-
-.btn-outline-warning {
-  background-color: #ffc107;
-  color: #fff;
-  border: 1px solid #ffc107;
-}
-
-/* Green Color for Fourth Option */
-.btn-outline-success {
-  background-color: #28a745; /* Green background */
-  color: #fff;
-  border: 1px solid #28a745; /* Green border */
-}
-
-/* Additional Hover Effects for Color Change */
-.btn-outline-primary:hover {
-  background-color: #0056b3; /* Darken blue */
-  border-color: #0056b3;
-}
-
-.btn-outline-danger:hover {
-  background-color: #c82333; /* Darken red */
-  border-color: #c82333;
-}
-
-.btn-outline-warning:hover {
-  background-color: #e0a800; /* Darken yellow */
-  border-color: #e0a800;
-}
-
-.btn-outline-success:hover {
-  background-color: #218838; /* Darken green */
-  border-color: #218838;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  color: #fff; 
 }
 
 @media (max-width: 576px) {
-  /* For small screens, change grid to 1 column */
+  
   .grid-container {
     grid-template-columns: repeat(2, 120px); 
   }
@@ -178,14 +113,14 @@ body {
   filter: brightness(1.2); /* Slightly increase brightness on hover */
 }
 
-/* Pressed Effect when selected (when operation is clicked) */
+
 .operation-image.pressed {
-  transform: translateY(-15px); /* Make it appear pressed into the surface */
-  filter: brightness(1.2); /* Slightly darken the image when pressed */
-  transition: none; /* Disable transition so it stays pressed immediately */
+  transform: translateY(-15px);
+  filter: brightness(1.2); 
+  transition: none; 
 }
 
-/* Add background images for each operation */
+
 .addition {
   background-image: url('./assets/addition.png');
   
@@ -207,9 +142,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px; /* Fixed width for the container */
-  height: 50px; /* Set a height for the container to allow vertical centering */
-  margin: 0 auto; /* Center the form control horizontally in its parent */
+  width: 100px; 
+  height: 50px; 
+  margin: 0 auto;
   color: white;
 }
 .question-container {
@@ -217,27 +152,32 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: auto; /* Content width will be based on its size */
-  width: 200px; /* Set a maximum width */
+  width: auto; 
+  width: 200px; 
   padding: 10px;
   text-align: center;
   border-radius: 8px;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto; 
   font-weight: bold;
   font-size: 50px;
 }
 
-.challenge{
-
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif;
-  color: white;
-  -webkit-text-stroke: 2px #000000;
+.greeting {
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
 }
 
-
-
+.greetImage{
+background-color: white;
+border-radius: 30px;
+}
+.greeting  p{
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: 'Comic Sans MS', sans-serif;
+  color: #000000;
+}
 .answer{
   font-weight: bold;
   font-size: 3rem;
@@ -245,24 +185,111 @@ body {
   color: white;
   -webkit-text-stroke: 2px #000000;
 }
- /* Customizing the Submit Answer button */
-.btn-primary {
-  background-color: #28a745; /* Change background color to green */
+
+.btn-outline-warning {
+  background-color: #ffc107;
+  color: #fff;
+  border: 1px solid #ffc107;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border-color:  #dc3545;
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  font-size: 25px; 
+}
+
+button.btn-danger:hover {
+  background-color: #c82333; 
+  border-color: #c82333;
+}
+
+
+.text-center .btn-primary {
+  background-color: #28a745; 
   border-color: #28a745;
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px 20px; /* Larger padding */
-  font-size: 18px; /* Larger font size */
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  font-size: 25px; 
 }
 
-.btn-primary:hover {
-  background-color: #218838; /* Darker green on hover */
+.text-center .btn-primary:hover {
+  background-color: #218838; 
   border-color: #1e7e34;
+  transform: scale(1.05);
 }
 
-footer {
-  display: flex;
-height: 100px;
-  align-items: center; /* Vertically align the content in the header */
-  padding: 10px;
-  background-color: #b4f577; /* Optional: background color for header */
+.text-center .btn-primary:focus {
+  outline: none; 
+  box-shadow: none; 
 }
+/* Media query for laptops */
+@media (max-width: 1444px) {
+  main {
+    font-size: 1rem; 
+  }
+  .question-container {
+    font-size: 40px; 
+    width: 180px;
+  }
+
+  .answer {
+    font-size: 2.5rem; 
+  }
+
+  .greeting p {
+    font-size: 0.9rem; 
+  }
+  
+  .btn-group-container .choice-button {
+    font-size: 1.1rem;  
+    padding: 8px 6px; 
+  }
+  .btn-group-container .buttons {
+    font-size: 1.1rem;  
+    padding: 8px 6px;  
+  }
+}
+
+/* Default Button Style */
+.buttons button.btn, .choice-button {
+  font-size: 1.5rem; /* Default button font size */
+  padding: 15px 30px; /* Default padding */
+  border-radius: 10px; /* Rounded corners */
+  width: auto; /* Auto width to fit content */
+  margin: 10px; /* Space between buttons */
+  transition: all 0.3s ease;
+}
+
+/* Media query for laptops (max-width: 1440px) */
+@media (max-width: 1440px) {
+  .buttons button.btn, .choice-button {
+    font-size: 1.2rem;  /* Smaller font size for laptop */
+    padding: 12px 25px; /* Reduced padding */
+    margin: 8px; /* Reduced margin between buttons */
+  }
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .buttons button.btn, .choice-button {
+    font-size: 1rem;  /* Smaller font size */
+    padding: 10px 20px;  /* Further reduced padding */
+    margin: 6px; /* Reduced margin for smaller screens */
+  }
+  .answer-container {
+    max-width: 600px; /* Reduced width on laptop for better readability */
+    padding: 0.8rem; /* Reduced padding */
+  }
+
+  .answer {
+    font-size: 1.3rem; /* Smaller font size for laptop */
+    padding: 1rem; /* Smaller padding */
+    -webkit-text-stroke: 1px #000000;
+  }
+}
+
+
+
+
